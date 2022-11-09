@@ -1,0 +1,118 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@EvgeniBursov 
+EvgeniBursov
+/
+pythonLab
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+pythonLab/Lab 1.1
+@EvgeniBursov
+EvgeniBursov Update Lab 1.1
+Latest commit 51eba6c on Sep 14
+ History
+ 1 contributor
+74 lines (66 sloc)  1.41 KB
+
+def Digits(num):
+    if num > 99999 or num < 1:
+        print("ERORR")
+        return
+    digit=0;
+    Num=num
+    while num>1:
+        num=num/10
+        digit=digit+1
+    print(digit,"digit")
+    if digit>1 and digit<=2:
+        num=0
+        while Num >1:
+            num = num+(Num % 10)
+            Num = Num//10
+        if num%2==0:
+            print("EVEN")
+        else:
+            print("ODD")
+
+    elif digit>2 and digit<=3:
+        num = 0
+        while Num > 1:
+            num = num + (Num % 10)
+            Num=Num//100
+            num = num + (Num % 10)
+            Num = 0
+        print(num)
+        if num % 2 == 0:
+            print("EVEN")
+        else:
+            print("ODD")
+
+    elif digit > 3 and digit <= 4:
+        num = 0
+        while Num > 1:
+            Num=Num//10
+            num = num + (Num % 10)
+            Num = Num // 10
+            num = num + (Num%10)
+            Num = 0
+        if num % 2 == 0:
+            print("EVEN")
+        else:
+            print("ODD")
+
+    elif digit > 4:
+        num = 0
+        count=0
+        while Num > 1:
+            Num=Num//10
+            count=count+1
+            if count==2:
+                num=Num%10
+        if num % 2 == 0:
+            print("EVEN")
+        else:
+            print("ODD")
+    else:
+        if Num%2==0:
+         print("EVEN")
+        else:
+          print("ODD")
+
+Digits(6)
+Digits(63)
+Digits(163)
+Digits(1653)
+Digits(16453)
+Digits(123456)
+
+
+
+
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+pythonLab/Lab 1.1 at master · EvgeniBursov/pythonLab
